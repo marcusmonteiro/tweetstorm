@@ -2,6 +2,10 @@
   "name": "tweetstorm",
   "version": "1.0.0",
   "description": "Command line tool that takes a text of arbitrary length as input and produces a stream of tweets from it.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcusmonteiro/tweetstorm.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "test"
