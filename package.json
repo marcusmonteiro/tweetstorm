@@ -1,0 +1,17 @@
+{
+  "name": "tweetstorm",
+  "version": "1.0.0",
+  "description": "Command line tool that takes a text of arbitrary length as input and produces a stream of tweets from it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "twitter",
+    "tweet",
+    "tweetstorm",
+    "command-line"
+  ],
+  "author": "Marcus Vinicius Monteiro de Souza",
+  "license": "ISC"
+}
