@@ -8,7 +8,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "lint": "eslint src tools",
+    "test": "npm run lint",
+    "build": "babel-node ./tools/build.js",
+    "start": "node ./build/bundle.js"
   },
   "keywords": [
     "twitter",
@@ -17,5 +20,40 @@
     "command-line"
   ],
   "author": "Marcus Vinicius Monteiro de Souza",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-node5": "^11.1.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.0.0",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": false,
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "import/no-unresolved": 2
+    }
+  },
+  "dependencies": {
+    "request": "^2.74.0",
+    "rmdir": "^1.2.0"
+  }
 }
